@@ -1,0 +1,9 @@
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS log_type VARCHAR(50) COMMENT '日志类型';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS operation VARCHAR(255) COMMENT '操作描述';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS user_name VARCHAR(100) COMMENT '操作人姓名';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS request_method VARCHAR(10) COMMENT '请求方法';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS request_url VARCHAR(500) COMMENT '请求URL';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS request_params TEXT COMMENT '请求参数';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS response_code INT COMMENT '响应状态码';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS error_message TEXT COMMENT '错误信息';
+ALTER TABLE system_logs ADD COLUMN IF NOT EXISTS execution_time INT COMMENT '执行时间毫秒';
